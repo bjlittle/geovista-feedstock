@@ -11,7 +11,7 @@ source:
   sha256: 15a200887766179b5d4ffacddc2c4247e9499fce79e38e604c59b7e6793190b8
 
 build:
-  number: 1
+  number: 2
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
@@ -37,7 +37,8 @@ requirements:
     - pooch
     - pykdtree
     - pyproj >=3.3
-    - pyvista >=0.43.1
+    - pyvista >=0.43.1,<0.45
+    - vtk <9.4
 
 test:
   imports:
